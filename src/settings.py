@@ -212,7 +212,7 @@ class Dialog(Gtk.Window):
         Gtk.Window.__init__(self, title="Settings")
         
         self.set_icon_from_file(CURRENT_PATH+'/images/slimbookamdcontroller.svg')
-        if type.find('Ryzen') == -1:
+        if type.find('Ryzen') != -1:
             if not config.has_option('PROCESSORS',MODEL_CPU):
                 label = Gtk.Label(label=_(
                 "Your processor is not supported yet. Do you want to add '{}' to the list?\n"+
